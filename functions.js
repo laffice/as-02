@@ -138,3 +138,63 @@ document.getElementById("reject-btn-8").addEventListener("click", function() {
 
 
 
+// deleting jobs from the list
+
+
+function deleteJob(Id) {
+   
+    const jobDel = document.getElementById(Id).remove();
+    jobCounts();
+}
+
+
+
+document.getElementById("del-btn-1").addEventListener("click", function() {
+    deleteJob("job-1");
+})
+
+
+
+document.getElementById("del-btn-2").addEventListener("click", function() {
+    deleteJob("job-2");
+})
+
+
+
+document.getElementById("del-btn-3").addEventListener("click", function() {
+    deleteJob("job-3");
+})
+
+
+
+document.getElementById("del-btn-4").addEventListener("click", function() {
+    deleteJob("job-4");
+})
+
+
+
+document.getElementById("del-btn-5").addEventListener("click", function() {
+    deleteJob("job-5");
+})
+
+
+
+document.getElementById("del-btn-6").addEventListener("click", function() {
+    deleteJob("job-6");
+})
+
+
+
+document.getElementById("del-btn-7").addEventListener("click", function() {
+    deleteJob("job-7");
+})
+
+
+
+document.getElementById("del-btn-8").addEventListener("click", function() {
+    deleteJob("job-8");
+})
+
+
+
+
