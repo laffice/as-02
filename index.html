@@ -16,6 +16,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 </head>
+<style>
+    * {
+            font-family: "Geist", sans-serif;
+        }
+        .active{
+    background-color: blue;
+    color: white;
+}
+body{
+    animation: fadeIn 0.5s ease;
+    
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.btn{
+    transition: all 0.3s ease;
+     
+}
+
+.btn:hover{
+    transform: translateY(-2px);
+}
+</style>
 
     <body class="bg-base-200">
     <header class="pt-[60px] max-w-[1150px] mx-auto">
@@ -71,9 +103,9 @@
         </div>
 
         <div>
-            <button   id="all" class="btn mt-[20px] mr-[10px]  bg-blue-600 text-white">All</button>
-            <button  id="interview" class="btn mt-[20px] mr-[10px]">Interview</button>
-            <button  id="rejected" class="btn mt-[20px] mr-[10px]">Rejected</button>
+            <button onclick="showOnly('all-section'); buttonColorChange('all')"  id="all" class="btn mt-[20px] mr-[10px]  bg-blue-600 text-white">All</button>
+            <button onclick="showOnly('interview-section'); buttonColorChange('interview')" id="interview" class="btn mt-[20px] mr-[10px]">Interview</button>
+            <button onclick="showOnly('rejected-section'); buttonColorChange('rejected')" id="rejected" class="btn mt-[20px] mr-[10px]">Rejected</button>
         </div>
 
         </section>
@@ -303,6 +335,6 @@
 
 
 
-
+<script src="functions.js"></script>
 </body>
 </html>
