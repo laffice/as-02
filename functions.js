@@ -197,4 +197,92 @@ document.getElementById("del-btn-8").addEventListener("click", function() {
 
 
 
+// job counts
 
+function jobCounts(){
+    const jobs = document.querySelectorAll(".job-card");
+    const count = jobs.length;
+    document.getElementById("job-count").innerText = count;
+    document.getElementById("total-jobs").innerText = count;
+    const rejectPage = document.getElementById("rej-page");
+
+    const interviewPage = document.getElementById("int-page");
+    const interviewCount = document.querySelectorAll(".status-box");
+
+    let interviewNum = 0;
+    let rejectedNum = 0;
+
+    for (let status of interviewCount){
+        if (status.innerText === "INTERVIEW"){
+            interviewPage.classList.add('hidden');
+            interviewNum++;
+        }
+         else if (status.innerText === "REJECTED"){
+            rejectPage.classList.add('hidden');
+            rejectedNum++;
+        }
+    }
+    document.getElementById("interview-count").innerText = interviewNum;
+    document.getElementById("rejected-count").innerText = rejectedNum;
+    document.getElementById("itn-count").innerText = interviewNum;
+    document.getElementById("rej-count").innerText = rejectedNum;
+}
+
+
+
+
+
+// function moveToInterview(jobId, statusId) {
+
+//     const job = document.getElementById(jobId);
+
+//     document
+//         .getElementById("interview-container")
+//         .appendChild(job);
+
+//     changeStatus(statusId, "INTERVIEW", "green");
+
+//     updateCounts();
+// }
+
+
+
+
+
+
+// function moveToRejected(jobId, statusId) {
+
+//     const job = document.getElementById(jobId);
+
+//     document
+//         .getElementById("rejected-container")
+//         .appendChild(job);
+
+//     changeStatus(statusId, "REJECTED", "red");
+
+//     updateCounts();
+// }
+
+
+
+
+// document.getElementById("interview-btn-1")
+// .addEventListener("click", function () {
+
+//     moveToInterview("job-1", "status-1");
+// })
+
+// document
+// .getElementById("reject-btn-1")
+// .addEventListener("click", function () {
+
+//     moveToRejected("job-1", "status-1");
+
+// });
+
+// document
+// .getElementById("del-btn-1")
+// .addEventListener("click", function () {
+
+//     deleteJob("job-1");
+// });
