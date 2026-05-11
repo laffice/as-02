@@ -181,8 +181,11 @@ document.getElementById("reject-btn-6").addEventListener("click", function(event
     applyStatus("status-6", "REJECTED", "#f81717", "white");
     
     const clickElement = event.target;
-    const card = clickElement.closest(".job-cart");
-    console.log(card)
+    const card = clickElement.closest(".job-card");
+    // console.log(card)
+    if(clickElement.classList.contains("reject")){
+        rejectCont.appendChild(card)
+    }
 
 
 });
@@ -191,24 +194,44 @@ document.getElementById("reject-btn-6").addEventListener("click", function(event
 
 document.getElementById("interview-btn-7").addEventListener("click", function(event) {
     applyStatus("status-7", "INTERVIEW", "#10b610", "white");
-    
+                  const clickedElement = event.target;
+  const card = clickedElement.closest(".job-card")
+
+  if(clickedElement.classList.contains("interview")){
+        interviewCont.appendChild(card);
+    }
 });
 
 document.getElementById("reject-btn-7").addEventListener("click", function(event) {
     applyStatus("status-7", "REJECTED", "#f81717", "white");
-    
+     const clickElement = event.target;
+    const card = clickElement.closest(".job-card");
+    // console.log(card)
+    if(clickElement.classList.contains("reject")){
+        rejectCont.appendChild(card)
+    }
 });
 
 
 document.getElementById("interview-btn-8").addEventListener("click", function(event) {
     applyStatus("status-8", "INTERVIEW", "#10b610", "white");
-    
+                  const clickedElement = event.target;
+  const card = clickedElement.closest(".job-card")
+
+  if(clickedElement.classList.contains("interview")){
+        interviewCont.appendChild(card);
+    }
 });
 
 document.getElementById("reject-btn-8").addEventListener("click", function(event) {
     applyStatus("status-8", "REJECTED", "#f81717", "white");
     
-
+ const clickElement = event.target;
+    const card = clickElement.closest(".job-card");
+    // console.log(card)
+    if(clickElement.classList.contains("reject")){
+        rejectCont.appendChild(card)
+    }
 });
 
 
